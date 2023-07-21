@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hitesh chai aur code tutorial</title>
+  </head>
+  <body>
+    <h1>chai aur javascript Hitesh</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const sayAkhil = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let IntervalID;
+
+    const startInterval = () => {
+      IntervalID = setInterval(sayAkhil, 2000, "Hello");
+      console.log("started");
+    };
+
+    const stopInterval = () => {
+      clearInterval(IntervalID);
+      console.log("stopped");
+    };
+
+    document.querySelector("#start").addEventListener("click", startInterval);
+
+    document.querySelector("#stop").addEventListener("click", stopInterval);
+  </script>
+</html>

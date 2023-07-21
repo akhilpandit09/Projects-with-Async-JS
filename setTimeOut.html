@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+</head>
+<body>
+    <h1>SET TIME OUT TUTORIAL HITESH</h1>
+    <button id="stop">click</button>
+</body>
+<script>
+    const sayAkhil = function(){
+        console.log("Akhileshwar pandit")
+    }
+    const changeText = function(){
+        document.querySelector("h1").innerHTML="I am changed text";
+    } 
+    // setTimeout
+    const changeMe = setTimeout(changeText,2000);
+
+    // clearTimeout
+    document.querySelector("#stop").
+    addEventListener("click", ()=>{
+        clearTimeout(changeMe);
+        console.log("Stopped")
+    })
+
+</script>
+</html>
